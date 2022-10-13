@@ -1,73 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!DOCTYPE HTML>
+<!-- This is how HTML comments look like -->
+<html>
+<!-- the title will appear on the page-->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Management</title>
-    <link rel="stylesheet" href="project.css">
-
+<title>Employee Interests Survey</title>
 </head>
 <body>
-    <h2>Project Management</h2>
-    <table cellpadding="10" cellspacing="2" align="center">
-        <th class="row1">Project Name</th>
-        <tr>
-            <td class="col1">Project Name</td>
-            <td class="col2"><input type="text" name="project name" id="PName" placeholder="project name"></td>
-        </tr>
-        <th class="row1">Assigned to</th>
-        <tr>
-            <td class="col1">Assigned to</td>
-            <td class="col2">
-                <select name="person" id="projectAssigned">
-                    <option value="Er Merry Petision">Er Merry Petision</option>
-                    <option value="Er Deepak Bhusan">Er Deepak Bhusan</option>
-                    <option value="Er Robert Watson">Er Robert Watson</option>
-                </select>
-            </td>
-        </tr>
-
-        <th class="row1">Start Date</th>
-        <tr>
-            <td class="col1">Start Date</td>
-            <td class="col2"><input type="date" name="Start Date" id="SDate" class="startDate"></td>
-        </tr>
-        <th class="row1">End Date</th>
-        <tr>
-            <td class="col1">End Date</td>
-            <td class="col2"><input type="date" name="End date" id="EDate" class="endDate"></td>
-        </tr>
-
-        <th class="row1">Priority</th>
-        <tr>
-            <td class="col1">Priority</td>
-            <td class="col2">
-                <input type="radio" name="priority" id="high" value="High"> High
-                <input type="radio" name="priority" id="average" value="Average"> Average
-                <input type="radio" name="priority" id="low" value="Low"> Low
-            </td>
-        </tr>
-        <th class="row1">Description</th>
-        <tr>
-            <td class="col1">Description</td>
-            <td class="col2"><textarea name="description" id="description" cols="35" rows="4"></textarea></td>
-        </tr>
-        <tr colspan="2" align="center">
-            <td>
-                <button type="submit" class="submit1"  onclick="submitProjectDetails()">Submit</button>
-            </td>
-            <td>
-                <button type="reset" class="reset1" onclick="resetProjectDetails()">Clear</button>
-            </td>
-        </tr>
-        <tr colspan="1" align="center">
-            <td>
-                <button type="reset" class="reset2" onclick="resetProjectDetails()">Clear</button>
-            </td>
-        </tr>
-    </table>
-    <script src="project.js"></script>
+<!-- as it is a survey form, we will need to submit the details, hence we use form -->
+<!-- We can give absolute url, or relative url like /nextpage.jsp, and specify POST or GET method -->
+<form action="http://google.co.in">
+<!-- If we remove this, every thing will move to the left of the page-->
+<div align="center">
+<!--Adds a heading to the form-->
+<h1>Employee Interests Survey form</h1>
+Enter your name:
+<!-- Input type text for small texts, specify size -->
+<input type="text" name="UserName" size=35 maxlength=35 value="">
+<!--Adds spaces - remove and see what happens -->
+</br></br>
+Enter your department:
+<input type="text" name="Deptt" size=35 maxlength=35 value=""> </br> </br>
+Tell us a little about yourself:
+<!-- For writing lot of text like descriptions with text wrapping,
+if you dont want text wrapping, you can add wrap = "off" (horizontal scrollbar -->
+<textarea name="Comments" cols=30 rows=4></textarea> </br> </br>
+Do you exercise at home?
+<!-- Radio buttons help you choose one out of the many values -->
+<input type="radio" name="exe" value=1>Yes
+<input type="radio" name="exe" value=2>No
+</p>
+How do you like to read about your favorite topics?
+<p>
+<!--Checkbox lets you select multiple options -->
+<input type="checkbox" name="Books">Books
+<input type="checkbox" name="Web">Online resources
+<input type="checkbox" name="Phone">Phone apps
+<input type="checkbox" name="Magazines">Magazines
+</p>
+What genre of movies do you like?
+<!--Select box lets you choose one of the multiple dropdown options-->
+<select name="moviepref" ><option>
+<option value=1 selected = "true">comedy
+<option value=2 >romance
+<option value=3 >thriller
+<option value=4 >horror
+<option value=5 >biopic
+</select>
+</br></br>
+<!--submits the information entered in the form by the user -->
+<input type=submit value="Submit form">
+</div>
+</form>
 </body>
-
 </html>
